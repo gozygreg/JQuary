@@ -1,4 +1,4 @@
-  
+
 /**
  * To run this file in Gitpod, use the 
  * command node map.js in the terminal
@@ -22,18 +22,36 @@ const students = [
     id: 1,
     name: 'Mark',
     profession: 'Developer',
-    skill: 'JavaScript'
+    skills: [
+      { name: 'JavaScript', yrsExperience: 1 },
+      { name: 'HTML', yrsExperience: 5 },
+      { name: 'css', yrsExperience: 3 },
+    ]
   },
   {
     id: 2,
     name: 'Ariel',
     profession: 'Developer',
-    skill: 'HTML'
+    skills: [
+      { name: 'JavaScript', yrsExperience: 1 },
+      { name: 'HTML', yrsExperience: 5 },
+      { name: 'css', yrsExperience: 3 },
+    ]
   },
   {
     id: 3,
     name: 'Jason',
     profession: 'Designer',
-    skill: 'CSS'
+    skills: [
+      { name: 'JavaScript', yrsExperience: 1 },
+      { name: 'HTML', yrsExperience: 5 },
+      { name: 'css', yrsExperience: 3 },
+    ]
   },
 ];
+
+const has5yearsExp = skill => skill.yrsExperience >= 5;
+const hasStrongSkills = student => student.skills.filter(has5yearsExp).length > 0;
+const candidates = students.filter(hasStrongSkills);
+const qualifiedCandidate = students.map()
+console.log(candidates);
